@@ -1,0 +1,44 @@
+.container {
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.input-busca {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 300px;
+  display: block;
+}
+
+.grid-filmes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card-filme {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.sem-imagem {
+  height: 300px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ano {
+  font-size: 14px;
+  color: #666;
+}
