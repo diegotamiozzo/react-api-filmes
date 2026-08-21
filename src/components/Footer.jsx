@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import logoImg from '../assets/logo.png'
 
+const AUTHOR_NAME = 'Diego Tamiozzo'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -8,15 +10,20 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-brand">
-        <Link to="/" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src={logoImg} alt="Logo" className="navbar-logo" style={{ width: '48px', height: '48px', objectFit: 'contain' }} />
-          CineFlix
-        </Link>
-        <p>Catálogo de filmes interativo.</p>
+          <Link to="/" aria-label="CineFlix - Página inicial">
+            <img src={logoImg} alt="" aria-hidden="true" width={32} height={32} />
+            <span>CineFlix</span>
+          </Link>
+          <p>Catálogo de filmes interativo.</p>
         </div>
+
         <div className="footer-credits">
-          <p>Desenvolvido por <strong>Diego Tamiozzo</strong></p>
-          <p className="footer-year">© {currentYear} • Todos os direitos reservados</p>
+          <p>
+            Desenvolvido por <strong>{AUTHOR_NAME}</strong>
+          </p>
+          <p className="footer-year">
+            &copy; <time dateTime={String(currentYear)}>{currentYear}</time> &bull; Todos os direitos reservados
+          </p>
         </div>
       </div>
     </footer>
